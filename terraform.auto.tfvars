@@ -41,10 +41,10 @@ network_security_groups = [
         direction                   = "Inbound"
         access                      = "Allow"
         protocol                    = "Tcp"
-        source_port_ranges          = ["8080"]
-        destination_port_ranges     = ["80"]
+        source_port_range           = "8080"
+        destination_port_range      = "80"
         source_address_prefix       = "*"
-        destination_address_prefixes= ["*"]
+        destination_address_prefix  = "*"
         description                 = "Allow HTTP traffic"
       },
       {
@@ -53,10 +53,10 @@ network_security_groups = [
         direction                   = "Inbound"
         access                      = "Allow"
         protocol                    = "Tcp"
-        source_port_ranges          = ["8080"]
-        destination_port_ranges     = ["443"]
+        source_port_range           = "8080"
+        destination_port_range      = "443"
         source_address_prefix       = "*"
-        destination_address_prefixes= ["*"]
+        destination_address_prefix  = "*"
         description                 = "Allow HTTPS traffic"
       }
     ]
