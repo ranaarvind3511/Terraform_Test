@@ -19,7 +19,7 @@ output "route_table_ids" {
 
 output "network_security_group_ids" {
   value = {
-    for nsg in azurerm_network_security_group.nsg : nsg.name => nsg.id
+    for nsg in azurerm_network_security_group.nsg : nsg.id => nsg.id
   }
   description = "The resource IDs of the network security groups."
 }
