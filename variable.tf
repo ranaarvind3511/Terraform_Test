@@ -44,8 +44,6 @@ variable "route_tables" {
 variable "network_security_groups" {
   type = list(object({
     nsg_name                    = string
-    location                    = string
-    resource_group_name         = string
     network_security_group_rules = list(object({
       name                        = string
       priority                    = number
