@@ -43,7 +43,7 @@ network_security_groups = [
         protocol                    = "Tcp"
         source_port_ranges          = ["8080"]
         destination_port_ranges     = ["80"]
-        source_address_prefixes     = ["*"]
+        source_address_prefix       = "*"
         destination_address_prefixes= ["*"]
         description                 = "Allow HTTP traffic"
       },
@@ -55,7 +55,7 @@ network_security_groups = [
         protocol                    = "Tcp"
         source_port_ranges          = ["8080"]
         destination_port_ranges     = ["443"]
-        source_address_prefixes     = ["*"]
+        source_address_prefix       = "*"
         destination_address_prefixes= ["*"]
         description                 = "Allow HTTPS traffic"
       }
