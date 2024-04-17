@@ -51,7 +51,7 @@ resource "azurerm_network_security_group" "nsg" {
       protocol                   = security_rule.value.protocol
       source_port_ranges          = security_rule.value.source_port_ranges
       destination_port_ranges     = security_rule.value.destination_port_ranges
-      source_address_prefixes      = security_rule.value.source_address_prefixes
+      source_address_prefix      = security_rule.value.source_address_prefix
       destination_address_prefixes = security_rule.value.destination_address_prefixes
       description                = security_rule.value.description
     }
