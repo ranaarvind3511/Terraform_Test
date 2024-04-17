@@ -7,12 +7,12 @@ location = "East US"
 subnets = [
   {
     name               = "subnet1"
-    address_prefix     = "10.0.1.0/24"
+    address_prefix     = ["10.0.1.0/24"]
     service_endpoints  = ["Microsoft.Sql", "Microsoft.Storage"]
   },
   {
     name               = "subnet2"
-    address_prefix     = "10.0.2.0/24"
+    address_prefix     = ["10.0.2.0/24"]
     service_endpoints  = ["Microsoft.AzureActiveDirectory"]
   }
 ]
