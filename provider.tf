@@ -2,11 +2,18 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.0"
+      version = ">= 2.0"
     }
   }
 
-  required_version = ">= 0.12"
+  # Configure the backend for Terraform Cloud
+  backend "remote" {
+    organization = "vinod0510"
+
+    workspaces {
+      name = "Terraform_Test"
+    }
+  }
 }
 
 provider "azurerm" {
