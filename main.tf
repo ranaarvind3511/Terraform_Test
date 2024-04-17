@@ -36,8 +36,8 @@ resource "azurerm_route_table" "route_table" {
 }
 
 resource "azurerm_network_security_group" "nsg" {
-  for_each            = { for nsg in var.network_security_groups : nsg.id => nsg }
-  name                = each.value.nsg_name
+  for_each            = { for nsg in var.network_security_groups : nsg.name => nsg }
+  name                = each.value.name
   location            = var.location
   resource_group_name = data.azurerm_resource_group.resource_group.name
 
