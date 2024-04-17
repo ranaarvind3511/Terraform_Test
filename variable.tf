@@ -41,12 +41,6 @@ variable "route_tables" {
   default = []
 }
 
-
-variable "nsg_name" {
-  type = string
-  description = "Specifies the name of the network security group."
-}
-
 variable "network_security_groups" {
   type = list(object({
     nsg_name                    = string
