@@ -33,7 +33,7 @@ route_tables = [
 
 network_security_groups = [
   {
-    nsg_name = "nsg1"
+    name = "nsg1"
     network_security_group_rules = [
       {
         name                        = "AllowHTTP"
