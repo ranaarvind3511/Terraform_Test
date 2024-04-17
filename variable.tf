@@ -52,7 +52,7 @@ variable "network_security_groups" {
       protocol                    = string
       source_port_ranges          = list(string)
       destination_port_ranges     = list(string)
-      source_address_prefixes     = list(string)
+      source_address_prefix       = string
       destination_address_prefixes= list(string)
       description                 = string
     }))
