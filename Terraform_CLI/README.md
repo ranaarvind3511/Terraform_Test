@@ -1,4 +1,4 @@
-# Terraform Cloud Deployment on Azure
+# Terraform CLI Deployment on Azure
 
 This README details the steps to configure and deploy Azure resources using Terraform Cloud. Below is a brief overview on how to adjust your `provider.tf` file, configure Azure credentials for authentication, and deploy resources using Terraform Cloud.
 
@@ -7,7 +7,7 @@ This README details the steps to configure and deploy Azure resources using Terr
 Before you begin, ensure you have the following:
 
 - An active Azure subscription.
-- Access to Terraform Cloud with an account.
+- Install the Terrafprm CLI.
 - Familiarity with Terraform basics.
 
 ## Step 1: Configure Your `provider.tf`
@@ -33,19 +33,11 @@ provider "azurerm" {
 }
 ```
 Adjusting provider.tf
-### Organization and Workspace Names:
-Replace `organization-name` and `workspace-name` with your actual Terraform Cloud organization and workspace names.
 ### Azure Credentials:
 You will need to replace xxx in the Azure provider block with your actual Azure credentials. This includes `client_id, client_secret, subscription_id, and tenant_id`.
 
 ## Step 2: Setting Up Azure Credentials for Authentication
-You should not hard-code your credentials in the provider.tf file. Instead, set these as environment variables in Terraform Cloud:
-
-- Log in to Terraform Cloud: <br>
-`Go to your workspace.`
-
-- Set Environment Variables: <br>
-`Navigate to "Variables" in your workspace settings.`
+You should not hard-code your credentials in the provider.tf file. Instead, set these as environment variables.:
 
 - Add the following environment variables: <br>
 `ARM_CLIENT_ID`: Your Azure Client ID. <br>
@@ -68,19 +60,19 @@ Ensure that you have Terraform installed on your machine. If not, download and i
 The first step in using Terraform is to initialize your project. This will prepare your working directory for other commands, set up the backend, and install the provider plugins that Terraform will use.
 
 ### Step 1: Initialize Terraform
-Run the following command in your terminal:
+Run the following command in your terminal
 
 ```bash
 terraform init
 ```
 ### Step 2: Plan the Execution
-Run the following command in your terminal:
+Run the following command in your terminal
 
 ```bash
 terraform plan
 ```
 ### Step 3: Apply the resource deplyment
-Run the following command in your terminal:
+Run the following command in your terminal
 
 ```bash
 terraform apply
